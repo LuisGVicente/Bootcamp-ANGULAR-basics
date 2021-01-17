@@ -1,0 +1,17 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>Partido</th>
+            <th>Resultado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let partido of matchList; let i=index">
+            <td>{{i+1}}: {{partido.team1}} vs {{partido.team2}}</td>
+            <td>{{partido.finalScore}}</td>
+            <td><button (click)="deleteMatch(i)">x</button></td>
+        </tr>
+    </tbody>
+</table>

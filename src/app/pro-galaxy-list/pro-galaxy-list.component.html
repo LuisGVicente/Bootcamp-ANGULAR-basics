@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>Planeta</th>
+            <th>Distancia</th>
+            <th>Gravedad</th>
+            <th>Superficie</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let planeta of galaxyList; let i=index">
+            <td>{{planeta.name}}</td>
+            <td>{{planeta.distance}}</td>
+            <td>{{planeta.gravity}}</td>
+            <td>{{planeta.surface}}</td>
+            <td><button (click)="selectPlanet(i)">x</button></td>
+        </tr>
+    </tbody>
+</table>
